@@ -1,9 +1,14 @@
-# Fabric Example Mod
+# LNQ
 
-## Setup
+Commands an utils for private server.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+## Suicide
 
-## License
+`/suicide` and `/epic`
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## TPS
+
+`/tps` to get current tps.
+
+Will transmit PlayerListHeader Packet every 10s with online players + TPS.
+TODO: configureability for header? merge with SID?

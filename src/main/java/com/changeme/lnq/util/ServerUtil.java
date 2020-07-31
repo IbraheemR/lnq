@@ -1,19 +1,25 @@
-package com.changeme.lnq;
+package com.changeme.lnq.util;
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.dedicated.MinecraftDedicatedServer;
 
-public class Util {
-
+public class ServerUtil {
     public static float getServerTickTime() {
         return ((MinecraftDedicatedServer) FabricLoader.getInstance().getGameInstance()).getTickTime();
     }
 
-    public static String getServerTPSString() {
+    public static float getServerTPS() {
         float tickTime = getServerTickTime();
         float tps = 1000/tickTime;
 
         tps = tps > 20 ? 20: tps;
+
+        return tps;
+    }
+
+    public static String getServerTPSString() {
+        float tickTime = getServerTickTime();
+        float tps = getServerTPS();
 
         char color;
         if (tps > 15) {
@@ -27,7 +33,13 @@ public class Util {
         return String.format("§%s%.1fTPS§r (%.2f ms)", color, tps, tickTime);
     }
 
-    private static String[] adminUUIDs = {
-            "2b320790-fb08-4e62-8d50-aa12a40850b1" // dYdXplusC
-    };
+
+
+    public static int getPlayerCount() {
+        return ((MinecraftDedicatedServer) FabricLoader.getInstance().getGameInstance()).getCurrentPlayerCount();
+    }
+
+    public static int getMaxPlayerCount() {
+        return ((MinecraftDedicatedServer) FabricLoader.getInstance().getGameInstance()).getMaxPlayerCount();
+    }
 }
