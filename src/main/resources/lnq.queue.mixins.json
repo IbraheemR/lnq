@@ -1,13 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.changeme.lnq.mixin",
+  "package": "com.changeme.lnq.queue.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "PlayerListHeaderAccessor",
-    "SendPlayerListHeaderOnSpawn"
-  ],
-  "client": [
+    "QueuePlayerManagerMixin",
+    "QueueServerWorldMixin"
   ],
   "injectors": {
     "defaultRequire": 1

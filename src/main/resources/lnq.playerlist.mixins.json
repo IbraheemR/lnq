@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.changeme.lnq.playerlist.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "PlayerListHeaderAccessor",
+    "SendPlayerListHeaderOnSpawn"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

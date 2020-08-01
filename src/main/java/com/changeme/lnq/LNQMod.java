@@ -2,6 +2,8 @@ package com.changeme.lnq;
 
 import com.changeme.lnq.commands.SuicideCommand;
 import com.changeme.lnq.commands.TPSCommand;
+import com.changeme.lnq.playerlist.CustomPlayerList;
+import com.changeme.lnq.queue.QueueManger;
 import com.changeme.lnq.restapi.RestAPI;
 import com.changeme.lnq.util.ModUtil;
 import net.fabricmc.api.ModInitializer;
@@ -10,18 +12,15 @@ import net.fabricmc.api.ModInitializer;
 public class LNQMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
-		System.out.println(
-				String.format(
-						"LNQ v%s UP! :)",
-						ModUtil.getLNQModMetadata().getVersion().getFriendlyString()
-				)
-		);
+		System.out.println(String.format("LNQ v%s UP! :)",ModUtil.LNQModMetadata.getVersion().getFriendlyString()));
 
-		SuicideCommand.register();
+		SuicideCommand.init();
+		TPSCommand.init();
 
-		TPSCommand.register();
-		CustomPlayerList.register();
+		CustomPlayerList.init();
 
-		RestAPI.register();
+		RestAPI.init();
+
+//		QueueManger.init();
 	}
 }

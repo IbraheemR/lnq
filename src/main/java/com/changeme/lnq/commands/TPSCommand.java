@@ -8,7 +8,7 @@ import net.minecraft.text.LiteralText;
 
 public class TPSCommand {
 
-    public static void register() {
+    public static void init() {
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
             dispatcher.register(CommandManager.literal("tps").executes(context -> {
                 context.getSource().sendFeedback(new LiteralText("Server Reports: " + ServerUtil.getServerTPSString()), false);

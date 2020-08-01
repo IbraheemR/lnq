@@ -1,4 +1,4 @@
-package com.changeme.lnq.mixin;
+package com.changeme.lnq.playerlist.mixins;
 
 import net.minecraft.network.packet.s2c.play.PlayerListHeaderS2CPacket;
 import net.minecraft.text.Text;

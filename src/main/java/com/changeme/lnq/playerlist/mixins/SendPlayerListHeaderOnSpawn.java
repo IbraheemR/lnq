@@ -1,6 +1,6 @@
-package com.changeme.lnq.mixin;
+package com.changeme.lnq.playerlist.mixins;
 
-import com.changeme.lnq.CustomPlayerList;
+import com.changeme.lnq.playerlist.CustomPlayerList;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

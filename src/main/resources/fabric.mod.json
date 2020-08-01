@@ -10,7 +10,8 @@
     ]
   },
   "mixins": [
-    "lnq.mixins.json"
+    "lnq.playerlist.mixins.json",
+    "lnq.queue.mixins.json"
   ],
 
   "depends": {

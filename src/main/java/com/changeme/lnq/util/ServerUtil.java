@@ -1,7 +1,12 @@
 package com.changeme.lnq.util;
 
+import com.changeme.lnq.queue.QueueManger;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.dedicated.MinecraftDedicatedServer;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
 
 public class ServerUtil {
     public static float getServerTickTime() {
@@ -35,11 +40,11 @@ public class ServerUtil {
 
 
 
-    public static int getPlayerCount() {
-        return ((MinecraftDedicatedServer) FabricLoader.getInstance().getGameInstance()).getCurrentPlayerCount();
+    public static int getIngamePlayerCount() {
+        return ModUtil.getDedicatedServer().getCurrentPlayerCount() - QueueManger.getSize();
     }
 
     public static int getMaxPlayerCount() {
-        return ((MinecraftDedicatedServer) FabricLoader.getInstance().getGameInstance()).getMaxPlayerCount();
+        return ModUtil.getDedicatedServer().getMaxPlayerCount();
     }
 }
