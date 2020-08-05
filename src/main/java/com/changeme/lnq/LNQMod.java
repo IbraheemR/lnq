@@ -1,5 +1,6 @@
 package com.changeme.lnq;
 
+import com.changeme.lnq.commands.OpenInventoryCommand;
 import com.changeme.lnq.commands.SuicideCommand;
 import com.changeme.lnq.commands.TPSCommand;
 import com.changeme.lnq.restapi.RestAPI;
@@ -17,11 +18,13 @@ public class LNQMod implements ModInitializer {
 				)
 		);
 
-		SuicideCommand.register();
+		SuicideCommand.init();
 
-		TPSCommand.register();
-		CustomPlayerList.register();
+		TPSCommand.init();
+		CustomPlayerList.init();
 
-		RestAPI.register();
+		OpenInventoryCommand.init();
+
+		RestAPI.init();
 	}
 }

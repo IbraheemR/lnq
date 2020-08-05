@@ -8,7 +8,7 @@ import static spark.Spark.get;
 import static spark.Spark.port;
 
 public class RestAPI {
-    public static void register() {
+    public static void init() {
         port(8000);
 
         get("/", (request, response) ->
