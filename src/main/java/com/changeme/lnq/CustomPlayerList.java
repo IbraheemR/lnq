@@ -10,7 +10,7 @@ import net.minecraft.text.LiteralText;
 
 public class CustomPlayerList {
 
-    static public void register() {
+    static public void init() {
         ServerTickEvents.START_SERVER_TICK.register(server -> {
             if(server.getTicks() % 200 == 0) { // Every 10 seconds
                 sendList();

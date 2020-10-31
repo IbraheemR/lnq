@@ -23,7 +23,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:0.16.0+build.384-1.16.1"
 
 	// Spark HTTP server helper
-	compile "com.sparkjava:spark-core:2.9.1"
+	modCompile "com.sparkjava:spark-core:2.9.1"
+	include "com.sparkjava:spark-core:2.9.1"
 }
 
 processResources {

@@ -2,13 +2,12 @@ package com.changeme.lnq.restapi;
 
 import com.changeme.lnq.util.ModUtil;
 import com.changeme.lnq.util.ServerUtil;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import static spark.Spark.get;
 import static spark.Spark.port;
 
 public class RestAPI {
-    public static void register() {
+    public static void init() {
         port(8000);
 
         get("/", (request, response) ->

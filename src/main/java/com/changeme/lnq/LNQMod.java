@@ -17,11 +17,11 @@ public class LNQMod implements ModInitializer {
 				)
 		);
 
-		SuicideCommand.register();
+		SuicideCommand.init();
 
-		TPSCommand.register();
-		CustomPlayerList.register();
+		TPSCommand.init();
+		CustomPlayerList.init();
 
-		RestAPI.register();
+		RestAPI.init();
 	}
 }

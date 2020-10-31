@@ -8,7 +8,7 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.TranslatableText;
 
 public class SuicideCommand {
-    public static void register() {
+    public static void init() {
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
             dispatcher.register(CommandManager.literal("suicide").executes(SuicideCommand::handleSuicideCommand));
         });
